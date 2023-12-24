@@ -32,9 +32,9 @@ comments :
 
 # Internal nav
 nav:
-  - ZDJĘCIA: "https://sunbliss.github.io/photorama/gallery/"
-  - FILMY: "https://sunbliss.github.io/photorama/journal/"
-  - O NAS: "https://sunbliss.github.io/photorama/about/"
+  - ZDJĘCIA: "https://whale-observer-app.github.io/wedding/gallery/"
+  - FILMY: "https://whale-observer-app.github.io/wedding/journal/"
+  - O NAS: "https://whale-observer-app.github.io/wedding/about/"
 
 # All translation keys
 translations:
