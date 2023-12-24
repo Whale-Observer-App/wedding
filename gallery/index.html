@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "ALBUMY"
-description: "Kolekcja zdjęć i filmów z naszego wesela"
+title: "ZDJĘCIA"
+description: "Kolekcja zdjęć z naszego wesela"
 active: gallery
 header-img: "img/gallery-bg.jpg"
 images:
@@ -15,19 +15,15 @@ images:
    gallery-date: 12 Sierpień 2023
  - image_path: /gallery/albums/alb03.jpg
    gallery-folder: /gallery/gallery03/
-   gallery-name: Fotobudka - Animacje
+   gallery-name: Fotobudka - Zdjęcia i Animacje
    gallery-date: 12 Sierpień 2023
  - image_path: /gallery/albums/alb04.jpg
    gallery-folder: /gallery/gallery04/
-   gallery-name: Fotobudka - Wszystkie zdjęcia
-   gallery-date: 12 Sierpień 2023
- - image_path: /gallery/albums/alb05.jpg
-   gallery-folder: /gallery/gallery05/
    gallery-name: Poprawiny - Zdjęcia
    gallery-date: 13 Sierpień 2023
- - image_path: /gallery/albums/alb06.jpg
-   gallery-folder: /gallery/gallery06/
-   gallery-name: Plener
+ - image_path: /gallery/albums/alb05.jpg
+   gallery-folder: /gallery/gallery05/
+   gallery-name: Plener - Zdjęcia
    gallery-date: Wrzesień 2023
 ---
 
@@ -48,9 +44,11 @@ images:
 			<!-- Gallery __-->
 			<div class="gallery masonry-gallery">
 				
-{% for image in page.images %}  	
+{% for image in page.images %}
+
 
 	               <figure class="gallery-item">
+                       <h6>{{image.gallery-name}}</h6>
                          <figure class="effect-selena">
 					<header class='gallery-icon'>
 		       

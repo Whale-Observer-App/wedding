@@ -1,21 +1,11 @@
 ---
 layout: page
-title: "album"
-description: "masonry"
+title: "Fotobudka 360 - Nagrania"
+description: "Nagrania z foto-budki 360"
 active: gallery
 header-img: "img/gallery-bg.jpg"
-album-title: "my 2nd album"
-images:
- - image_path: /gallery/archive/g02/bg1.jpg
-   caption: IMAGE TITLE
-   mfp-title: IMAGE TITLE
-   copyright: © photorama
- - image_path: /gallery/archive/g02/bg2.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
- - image_path: /gallery/archive/g02/bg3.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
+album-title: "Fotobudka 360 - Nagrania"
+images_folder: /gallery/archive/g02/
 ---
 
 <html class="no-js" lang="en">
@@ -33,25 +23,21 @@ images:
 
 			<!-- Gallery __-->
 			<div class="gallery masonry-gallery">
-		
-{% for image in page.images %}  		
 
+				{% for file in site.static_files %}
+				{% if file.path contains page.images_folder %}
+				{% assign image_path = file.path | relative_url %}
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
 
-<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
-						
-					</header>	
-					<figcaption class='gallery-caption'>
-						<div class="entry-summary">
-							<h3>{{image.caption}}</h3>
-							<p>{{image.copyright}}</p>
-						</div>
-					</figcaption>
+						<a href="{{ image_path }}" class="popup">
+							<img loading="lazy" src="{{ image_path }}" alt="image">
+						</a>
+
+					</header>
 				</figure>
-				
-{% endfor %}
+				{% endif %}
+				{% endfor %}
 
 			</div>
 
@@ -88,7 +74,7 @@ images:
        },
       image: {
          titleSrc: function(item) {
-             return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+             // return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
             }
         }
           // other options
