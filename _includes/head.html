@@ -1,5 +1,27 @@
 <head>
 
+    <script type="text/javascript">
+        // Function to check the password
+        function checkPassword() {
+            const correctPassword = 'Dobra zabawa 2023';
+            const userPassword = localStorage.getItem('sitePassword');
+
+            if (userPassword !== correctPassword) {
+                const enteredPassword = prompt('Podaj hasło dostepu do strony:');
+
+                if (enteredPassword !== correctPassword) {
+                    alert('Złe hasło. Przekierowanie do google.');
+                    window.location.href = 'https://google.com'; // Redirect to a safe URL
+                } else {
+                    localStorage.setItem('sitePassword', enteredPassword);
+                }
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = checkPassword;
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
