@@ -2,8 +2,8 @@
 title: Wesele Karolina & Grzegorz
 email: ""
 description: "Wesele Karolina & Grzegorz"
-url: "https://whale-observer-app.github.io"
-baseurl: "/wedding"
+url: "https://karolina-i-grzgorz.pl"
+baseurl: ""
 twitter_username: ""
 instagram_username: ""
 github_username:  ""
@@ -32,9 +32,9 @@ comments :
 
 # Internal nav
 nav:
-  - ZDJĘCIA: "https://whale-observer-app.github.io/wedding/gallery/"
-  - FILMY: "https://whale-observer-app.github.io/wedding/journal/"
-  - O NAS: "https://whale-observer-app.github.io/wedding/about/"
+  - ZDJĘCIA: "/gallery/"
+  - FILMY: "/journal/"
+  - O NAS: "/about/"
 
 # All translation keys
 translations:
